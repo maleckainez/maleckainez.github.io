@@ -22,19 +22,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }})
 })
 document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section');
+    // Select all sections with the relevant classes
+    const sections = document.querySelectorAll('.top, .about, .work, .realizacje, .contact');
     const navLinks = document.querySelectorAll('.navbar .links a');
 
-    function changeLinkState() {
-        let index = sections.length;
-
-        while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
-
-        navLinks.forEach((link) => link.classList.remove('active'));
-        navLinks[index].classList.add('active');
+    // Function to determine which section is currently in view
+    function getActiveSection() {
+        let currentSection = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= sectionTop - sectionHeight / 3) {
+                currentSection = section.classList[0]; // Get the first class name
+            }
+        });
+        return currentSection;
     }
 
+    // Function to update the active state of the navigation links
+    function changeLinkState() {
+        const activeSection = getActiveSection();
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(activeSection)) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Initial check
     changeLinkState();
+
+    // Add scroll event listener
     window.addEventListener('scroll', changeLinkState);
 });
-
