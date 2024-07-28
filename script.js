@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 document.addEventListener('DOMContentLoaded', function() {
     // Select all sections with the relevant classes
-    const sections = document.querySelectorAll('.top, .about, .work, .realizacje, .contact');
+    const sections = document.querySelectorAll('.top, .about, .work, .realizacje, .kontakt');
     const navLinks = document.querySelectorAll('.navbar .links a');
 
     // Function to determine which section is currently in view
