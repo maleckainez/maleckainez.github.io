@@ -1,18 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap');
-
-* {
-    scroll-behavior: smooth;
-    font-family: 'Titillium Web', sans-serif;
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
-    -ms-scroll-snap-points-y: 100vh;
 }
-body {
-    background-color: white;
-    /*  height: 3000px; Ensure the body has a set height */
+body{
+    font-family: 'Titillium Web', sans-serif;
+    width: 100%;
 }
 .dogory{
     opacity: 0;
@@ -40,9 +37,9 @@ body {
     align-items: center;
     position: fixed;
     top: 0;
-    width: 100vw; /* Ensure width takes the full viewport width */
     transition: 0.5s;
     font-size: 20px;
+    width: 100%;
 }
 .navbar a {
     text-decoration: underline;
@@ -71,16 +68,14 @@ body {
 .navbar a.active {
     color: #6c459e;
 }
-
 #top{
     scroll-snap-align: start;
     background-image: url(AdobeStock_78473109_Preview.jpeg);
     background-attachment: inherit;
     background-size: cover;
-    max-width: 100lh;
-    width: 100lh;
     height: 100vh;
-    display: table-cell;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     vertical-align: middle;
     justify-content: center;
@@ -88,6 +83,7 @@ body {
     font-weight: 700;
     color: white;
     margin: auto;
+    width: 100%;
 }
 .tytul{
     font-family: Ropa Sans, serif;
@@ -122,7 +118,7 @@ body {
     background-image: url('AdobeStock_30640999_Preview.jpg');
     background-attachment: inherit;
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -140,7 +136,7 @@ body {
     color: #2B2E63;
     text-decoration: underline;
     text-decoration-color: #798DC5;
-/*    text-shadow: 2px 2px 2px  RGB(70, 157, 206, 0.30);*/
+    /*    text-shadow: 2px 2px 2px  RGB(70, 157, 206, 0.30);*/
 }
 .abouttext{
     font-weight: lighter;
@@ -153,7 +149,7 @@ body {
     background-image: url('AdobeStock_236276543_Preview.jpeg');
     background-attachment: inherit;
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -183,7 +179,7 @@ li+li{
     /*background-image: url('AdobeStock_236276543_Preview.jpeg');
     background-attachment: inherit;
     background-size: cover;*/
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
