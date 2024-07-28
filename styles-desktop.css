@@ -57,16 +57,20 @@ body{
     background-color: #FDFBFC;
     border-bottom: 1px solid rgba(105, 105, 105, 0.25);
     font-size: 16px; /* Slightly smaller font size when scrolled */
+    transition: 0.5s;
 }
 .navbar.scrollowany a {
     color: dimgray;
+    transition: 0.5s;
 }
 .navbar.scrollowany a:hover {
     color: black;
     text-shadow: 1px 1px 1px dimgray;
 }
 .navbar a.active {
-    color: #6c459e;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    transition: 0.5s;
 }
 #top{
     scroll-snap-align: start;
